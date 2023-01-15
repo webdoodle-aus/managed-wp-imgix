@@ -5,8 +5,8 @@ if (!defined('ABSPATH')) {
     exit; // Exit if accessed directly.
 }
 
-add_action('wp_head', 'managed_wp_imgix_js');
-function managed_wp_imgix_js()
+add_action('wp_head', 'managed_wp_imgix_ajax_fetch');
+function managed_wp_imgix_ajax_fetch()
 {
     ?>
     <script type="text/javascript">

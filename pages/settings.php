@@ -25,7 +25,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <hr/>
 
-        <input type="checkbox" name="handle_wp_imgix_settings_display" onclick="handle_wp_imgix_settings_display()">
+        <input type="checkbox" name="handle-wp-imgix-settings-display" onclick="handle_wp_imgix_settings_display()">
         Already have ImgIX credentials?
         </input>
 
