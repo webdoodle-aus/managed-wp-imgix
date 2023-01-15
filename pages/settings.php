@@ -4,7 +4,7 @@ $show_success_msg = FALSE;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     update_option('wp_imgix_url', $_POST['wp_imgix_url']);
-    update_option('managed_wp_imgix_secondary_layout_color', $_POST['managed_wp_imgix_secondary_layout_color']);
+    update_option('wp_imgix_signing_token', $_POST['wp_imgix_signing_token']);
 
     // Success message
     $show_success_msg = TRUE;
@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 ?>
 <div class="wrap">
-    <form name="managed_wp_imgix" method="post" action="options.php">
+    <form name="managed_wp_imgix" method="post" action="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?page=managed-wp-imgix-settings'); ?>">
         <h1 class="wp-heading-inline"><?php _e('Setup Managed WP ImgIX', 'managed-wp-imgix'); ?></h1>
 
         <?php if ($show_success_msg) { ?>
