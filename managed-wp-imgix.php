@@ -18,7 +18,7 @@ define( 'MANAGED_IMGIX_PLUGIN_DIR_URL', plugin_dir_url( __FILE__ ));
 /*
  * Include helpers for javascript
  */
-require_once MANAGED_IMGIX_PLUGIN_DIR . 'includes/js_helpers.php';
+// require_once MANAGED_IMGIX_PLUGIN_DIR . 'includes/js_helpers.php';
 
 /*
  * Include helper functions

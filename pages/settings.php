@@ -82,3 +82,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 </div>
 
 <footer style="position:absolute; padding-top: 500px">Powered by <a href="https://webdoodle.com.au/">Web Doodle</a></footer>
+
+<script type="text/javascript">
+    console.log("__DEBUG__")
+    function handle_wp_imgix_settings_display() {
+        let imgix_settings = document.getElementById('managed_wp_imgix_settings_section');
+        imgix_settings.style.display = imgix_settings.style.display === 'none' ? '' : 'none';
+    }
+</script>
