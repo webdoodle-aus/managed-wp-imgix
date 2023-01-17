@@ -26,3 +26,6 @@
     </a>
 
 </div>
+
+
+<footer style="position:absolute; padding-top: 500px">Powered by <a href="https://webdoodle.com.au/">Web Doodle</a></footer>

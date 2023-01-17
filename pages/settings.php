@@ -3,8 +3,8 @@
 $show_success_msg = FALSE;
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-    update_option('wp_imgix_url', $_POST['wp_imgix_url']);
-    update_option('wp_imgix_signing_token', $_POST['wp_imgix_signing_token']);
+    update_option('WP_IMGIX_URL', $_POST['WP_IMGIX_URL']);
+    update_option('WP_IMGIX_SIGNING_TOKEN', $_POST['WP_IMGIX_SIGNING_TOKEN']);
 
     // Success message
     $show_success_msg = TRUE;
@@ -25,40 +25,50 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
         <hr/>
 
-        <input type="checkbox" name="handle-wp-imgix-settings-display" onclick="handle_wp_imgix_settings_display()">
+        <?php
+        $is_displayed = 'none';
+        if(
+                get_option('WP_IMGIX_SIGNING_TOKEN', 'managed-wp-imgix') ||
+                get_option('WP_IMGIX_SIGNING_TOKEN', 'managed-wp-imgix')
+        ){
+            $is_displayed = 'block';
+        }
+        ?>
+
+        <input type="checkbox" name="set_wp_imgix_settings" onclick="handle_wp_imgix_settings_display()">
         Already have ImgIX credentials?
         </input>
 
 
-        <div id="managed_wp_imgix_settings_section" style="display: block">
+        <div id="managed_wp_imgix_settings_section" style="display: <?php echo $is_displayed ?>">
             <table class="form-table" role="presentation">
                 <tbody>
                 <tr>
                     <th scope="row">
-                        <label for="wp_imgix_url"><?php _e('WP_IMGIX_URL', 'managed-wp-imgix') ?>
+                        <label for="WP_IMGIX_URL"><?php _e('WP_IMGIX_URL', 'managed-wp-imgix') ?>
                         </label>
                     </th>
                     <td>
                         <input
-                                name="wp_imgix_url"
+                                name="WP_IMGIX_URL"
                                 type="text"
-                                id="wp_imgix_url"
-                                value="<?php echo get_option('wp_imgix_url'); ?>"
+                                id="WP_IMGIX_URL"
+                                value="<?php echo get_option('WP_IMGIX_URL'); ?>"
                                 class="regular-text"
                         >
                     </td>
                 </tr>
                 <tr>
                     <th scope="row">
-                        <label for="wp_imgix_signing_token"><?php _e('WP_IMGIX_SIGNING_TOKEN', 'managed-wp-imgix') ?>
+                        <label for="WP_IMGIX_SIGNING_TOKEN"><?php _e('WP_IMGIX_SIGNING_TOKEN', 'managed-wp-imgix') ?>
                         </label>
                     </th>
                     <td>
                         <input
-                                name="wp_imgix_signing_token"
+                                name="WP_IMGIX_SIGNING_TOKEN"
                                 type="text"
-                                id="wp_imgix_signing_token"
-                                value="<?php echo get_option('wp_imgix_signing_token'); ?>"
+                                id="WP_IMGIX_SIGNING_TOKEN"
+                                value="<?php echo get_option('WP_IMGIX_SIGNING_TOKEN'); ?>"
                                 class="regular-text"
                         >
                     </td>
@@ -71,7 +81,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                 <a href="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?page=managed-wp-imgix-home'); ?>">
                     <button class="button" type="button"><?php _e('Go Back', 'managed-wp-imgix') ?></button>
                 </a>
-
                 <input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'managed-wp-imgix') ?>">
             </p>
         </div>
@@ -84,7 +93,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 <footer style="position:absolute; padding-top: 500px">Powered by <a href="https://webdoodle.com.au/">Web Doodle</a></footer>
 
 <script type="text/javascript">
-    console.log("__DEBUG__")
     function handle_wp_imgix_settings_display() {
         let imgix_settings = document.getElementById('managed_wp_imgix_settings_section');
         imgix_settings.style.display = imgix_settings.style.display === 'none' ? '' : 'none';
