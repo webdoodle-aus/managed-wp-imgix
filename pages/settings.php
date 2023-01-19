@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         }
         ?>
 
-        <input type="checkbox" name="set_wp_imgix_settings" onclick="handle_wp_imgix_settings_display()">
+        <input type="checkbox" name="set_wp_imgix_settings" onclick="handle_wp_imgix_settings_display()" <?php if ($is_displayed == 'block') echo 'checked disabled'; ?>>
         Already have ImgIX credentials?
         </input>
 
