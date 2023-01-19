@@ -78,9 +78,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </table>
             <br />
             <p class="submit">
-                <a href="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?page=managed-wp-imgix-home'); ?>">
-                    <button class="button" type="button"><?php _e('Go Back', 'managed-wp-imgix') ?></button>
-                </a>
+                <a href="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?page=managed-wp-imgix-home'); ?>"><button class="button" type="button"><?php _e('Go Back', 'managed-wp-imgix') ?></button></a>
                 <input type="submit" name="submit" id="submit" class="button button-primary" value="<?php _e('Save Changes', 'managed-wp-imgix') ?>">
             </p>
         </div>
