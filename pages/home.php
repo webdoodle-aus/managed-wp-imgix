@@ -21,11 +21,11 @@
     <p>Once you’ve reviewed both websites, get started by clicking the button below.</p>
 
 
-    <a href="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?page=managed-wp-imgix-settings'); ?>">
+    <a href="<?php echo htmlspecialchars($_SERVER['PHP_SELF'] . '?page=managed-wp-imgix-settings'); ?>" target="_blank">
         <button class="button button-primary"><?php _e('Setup Managed WP ImgIX', 'managed-wp-imgix') ?></button>
     </a>
 
 </div>
 
 
-<footer style="position:absolute; padding-top: 500px">Powered by <a href="https://webdoodle.com.au/">Web Doodle</a></footer>
+<div class="alignleft" style="padding-top: 50px">Powered by <a href="https://webdoodle.com.au/">Web Doodle</a></div>

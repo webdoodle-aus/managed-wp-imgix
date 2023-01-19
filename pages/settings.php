@@ -88,7 +88,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 </div>
 
-<div class="alignleft"><p>Powered by <a href="https://webdoodle.com.au/">Web Doodle</a></p></div>
+<div class="alignleft" style="padding-top: 50px"><p>Powered by <a href="https://webdoodle.com.au/">Web Doodle</a></p></div>
 
 <script type="text/javascript">
     function handle_wp_imgix_settings_display() {
