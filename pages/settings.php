@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <td>
                         <input
                                 name="WP_IMGIX_URL"
-                                type="text"
+                                type="url"
                                 id="WP_IMGIX_URL"
                                 value="<?php echo get_option('WP_IMGIX_URL'); ?>"
                                 class="regular-text"
