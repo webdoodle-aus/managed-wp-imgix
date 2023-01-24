@@ -12,8 +12,11 @@ if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
+
 define( 'MANAGED_IMGIX_PLUGIN_DIR', plugin_dir_path( __FILE__ ));
 define( 'MANAGED_IMGIX_PLUGIN_DIR_URL', plugin_dir_url( __FILE__ ));
+
+require_once MANAGED_IMGIX_PLUGIN_DIR . 'vendor/wp-imgix/wp-imgix.php';
 
 
 /*
