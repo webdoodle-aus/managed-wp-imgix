@@ -28,8 +28,8 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         <?php
         $is_displayed = 'none';
         if(
-                get_option('WP_IMGIX_SIGNING_TOKEN', 'managed-wp-imgix') ||
-                get_option('WP_IMGIX_SIGNING_TOKEN', 'managed-wp-imgix')
+                get_option('WP_IMGIX_SIGNING_TOKEN') != 'SET-ME-UP' &&
+                get_option('WP_IMGIX_SIGNING_TOKEN')  != 'SET-ME-UP'
         ){
             $is_displayed = 'block';
         }
