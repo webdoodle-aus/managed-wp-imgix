@@ -23,8 +23,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
         <?php } ?>
 
-        <hr/>
-
         <?php
         $is_displayed = 'none';
         if(
@@ -34,11 +32,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $is_displayed = 'block';
         }
         ?>
+        <br />
+        <br />
 
         <input type="checkbox" name="set_wp_imgix_settings" onclick="handle_wp_imgix_settings_display()" <?php if ($is_displayed == 'block') echo 'checked disabled'; ?>>
         Already have ImgIX credentials?
         </input>
-
 
         <div id="managed_wp_imgix_settings_section" style="display: <?php echo $is_displayed ?>">
             <table class="form-table" role="presentation">
@@ -88,7 +87,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
 </div>
 
-<div class="alignleft" style="padding-top: 50px"><p>Powered by <a href="https://webdoodle.com.au/">Web Doodle</a></p></div>
+<div class="alignleft" style="padding-top: 50px"><p>Powered by <a href="https://webdoodle.com.au/" target="_blank">Web Doodle</a></p></div>
 
 <script type="text/javascript">
     function handle_wp_imgix_settings_display() {

@@ -28,4 +28,4 @@
 </div>
 
 
-<div class="alignleft" style="padding-top: 50px">Powered by <a href="https://webdoodle.com.au/">Web Doodle</a></div>
+<div class="alignleft" style="padding-top: 50px">Powered by <a href="https://webdoodle.com.au/" target="_blank">Web Doodle</a></div>
