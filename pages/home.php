@@ -9,12 +9,12 @@
         ImgIX, the fastest and largest image delivery and optimisation network, is now available for WordPress websites.
     </p>
 
-    <a href="https://imgix.com/">Learn more about ImgIX</a>
+    <a href="https://imgix.com/" target="_blank">Learn more about ImgIX</a>
 
     <br>
     <p>Managed WP ImgIX is a Web Doodle service that delivers all the website speed improvements ImgIX offers, within a simple WordPress installation.</p>
 
-    <a href="https://www.webdoodle.com.au/managed-wp-imgix">Learn more about Managed WP ImgIX</a>
+    <a href="https://www.webdoodle.com.au/managed-wp-imgix" target="_blank">Learn more about Managed WP ImgIX</a>
 
     <br />
     <br />
