@@ -1,3 +1,0 @@
-[submodule "vendor/wp-imgix"]
-	path = vendor/wp-imgix
-	url = https://github.com/rsoury/wp-imgix.git
