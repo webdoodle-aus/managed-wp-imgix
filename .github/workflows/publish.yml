@@ -10,7 +10,7 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3.3.0
         with:
-          token: ${{ secrets.GH_CI_TOKEN }}
+          token: ${{ secrets.GITHUB_TOKEN }}
           submodules: recursive
       - name: Create artifact
         uses: montudor/action-zip@v1.0.0
