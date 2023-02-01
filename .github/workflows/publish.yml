@@ -9,6 +9,9 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3.3.0
+        with:
+          token: ${{ secrets.GH_CI_TOKEN }}
+          submodules: recursive
       - name: Create artifact
         uses: montudor/action-zip@v1.0.0
         with:
